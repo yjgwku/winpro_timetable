@@ -19,7 +19,7 @@ namespace scheduler
             InitializeComponent();
             this.userId = userId;
             // MySQL 연결 초기화
-            string connectionString = "Server=localhost;Database=integrateexam1;Uid=root;Pwd=kysA247365!@;";
+            string connectionString = "Server=localhost;Database=integrateexam1;Uid=root;Pwd=dd;";
             connection = new MySqlConnection(connectionString);
         }
 
