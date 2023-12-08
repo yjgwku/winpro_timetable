@@ -29,7 +29,7 @@ namespace 프로젝트
         {
             try
             {
-                MySqlConnection connection = new MySqlConnection("Server=localhost;Database=integrateexam1;Uid=root;Pwd=kysA247365!@;");
+                MySqlConnection connection = new MySqlConnection("Server=localhost;Database=integrateexam1;Uid=root;Pwd=dd;");
                 connection.Open();//sql 서버 연결
                 int login_status = 0;//로그인 상태 변수 
                 string loginid = textBox1.Text;//텍스트박스1에 대입
