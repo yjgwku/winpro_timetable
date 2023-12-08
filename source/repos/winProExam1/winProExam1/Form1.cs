@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,11 +29,11 @@ namespace 프로젝트
         {
             try
             {
-                MySqlConnection connection = new MySqlConnection("Server = localhost;Database=dbtest;Uid=root;Pwd=1234;");
+                MySqlConnection connection = new MySqlConnection("Server=localhost;Database=integrateexam1;Uid=root;Pwd=kysA247365!@;");
                 connection.Open();//sql 서버 연결
                 int login_status = 0;//로그인 상태 변수 
-                string loginid = textBox1.Text;
-                string loginpwd = textBox2.Text;
+                string loginid = textBox1.Text;//텍스트박스1에 대입
+                string loginpwd = textBox2.Text;//텍스트박스2에 대입
                 string selectQuery = "SELECT * FROM account_info WHERE id = '" + loginid + "'";
                 MySqlCommand Selectcommand = new MySqlCommand(selectQuery, connection);
                 MySqlDataReader userAccount = Selectcommand.ExecuteReader();
@@ -41,7 +41,7 @@ namespace 프로젝트
                 {
                     if (loginid == (string)userAccount["id"] && loginpwd == (string)userAccount["pwd"])
                     {
-                        login_status = 1;
+                        login_status = 1;//로그인 성공
                     }
 
                 }
@@ -73,17 +73,17 @@ namespace 프로젝트
         {
             textBox1.BackColor = Color.White;
             panel2.BackColor = Color.White;
-            panel3.BackColor = SystemColors.Control;
+            panel3.BackColor=SystemColors.Control;
             textBox2.BackColor = SystemColors.Control;
-
+            
         }
 
         private void textBox2_Click(object sender, EventArgs e)
         {
-            textBox2.BackColor = Color.White;
-            panel3.BackColor = Color.White;
+            textBox2.BackColor=Color.White;
+            panel3.BackColor=Color.White;
             textBox1.BackColor = SystemColors.Control;
-            panel2.BackColor = SystemColors.Control;
+            panel2.BackColor=SystemColors.Control;
         }
 
         private void pictureBox3_MouseDown(object sender, MouseEventArgs e)
@@ -98,16 +98,16 @@ namespace 프로젝트
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            this.ActiveControl = textBox1;
         }
 
-
+       
 
         private void button2_Click(object sender, EventArgs e)
         {
             Form2 showform2 = new Form2();
             showform2.Show();
-
+            
 
         }
     }
