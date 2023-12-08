@@ -24,7 +24,7 @@ namespace 프로젝트
         {
             try
             {
-                MySqlConnection connection = new MySqlConnection("Server=localhost;Database=integrateexam1;Uid=root;Pwd=kysA247365!@;");
+                MySqlConnection connection = new MySqlConnection("Server=localhost;Database=integrateexam1;Uid=root;Pwd=dd;");
                 connection.Open();//연결 시작
 
                 string insertQuery = "INSERT INTO account_info (name, studentnum,id, pwd) VALUES ('" + textBox1.Text + "', '" + textBox2.Text + "', '" + textBox3.Text + "','" + textBox4.Text + "');";
