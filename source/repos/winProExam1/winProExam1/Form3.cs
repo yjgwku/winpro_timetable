@@ -10,8 +10,8 @@ namespace winProExam
     public partial class Form3 : Form
     {
 
-        private string userId;
-        string connectionString = "Server=localhost;Database=integrateexam1;Uid=root;Pwd=kysA247365!@;";
+        private string userId;//유저아이디 추가
+        string connectionString = "Server=localhost;Database=integrateexam1;Uid=root;Pwd=root;";//Mysql 연결 아이디
         DataTable selectedCoursesDataTable;
 
         public Form3(string userId)
