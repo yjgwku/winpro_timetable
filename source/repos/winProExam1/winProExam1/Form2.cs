@@ -1,4 +1,4 @@
-﻿using MySql.Data.MySqlClient;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,7 +25,7 @@ namespace 프로젝트
             try
             {
                 MySqlConnection connection = new MySqlConnection("Server=localhost;Database=integrateexam1;Uid=root;Pwd=kysA247365!@;");
-                connection.Open();
+                connection.Open();//연결 시작
 
                 string insertQuery = "INSERT INTO account_info (name, studentnum,id, pwd) VALUES ('" + textBox1.Text + "', '" + textBox2.Text + "', '" + textBox3.Text + "','" + textBox4.Text + "');";
                 MySqlCommand command = new MySqlCommand(insertQuery, connection);
@@ -35,7 +35,7 @@ namespace 프로젝트
                     MessageBox.Show(textBox1.Text + "님 회원가입 완료, 사용할 아이디는 " + textBox3.Text + "입니다.");
                     connection.Close();
                    
-                    Close();
+                    Close();//회원가입 폼 닫기
                 }
                 else
                 {
