@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -153,18 +153,6 @@ namespace scheduler
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            /*for (int Column = 0; Column < 4; Column++)
-            {
-                for (int Row = 0; Row < 8; Row++)
-                {
-                    if (textBox2 == dataGridView1[Column, Row].Value)
-                    {
-                        dataGridView1[Column, Row].Value = (""); break;
-                    }
-                }
-            }*/
-        }
+
     }
 }
